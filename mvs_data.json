@@ -1,0 +1,299 @@
+{
+    "Заголовок": {
+        "title": "МВС України"
+    },
+    "Метаопис": {
+        "meta_description": "Єдиний портал органів системи МВС України"
+    },
+    "Навігація": [
+        {
+            "text": "Про МВС",
+            "url": "https://mvs.gov.ua/pro-mvs"
+        },
+        {
+            "text": "Колегія",
+            "url": "https://mvs.gov.ua/kolegiia"
+        },
+        {
+            "text": "Нормативна база МВС",
+            "url": "https://mvs.gov.ua/ministry/normativna-baza-mvs"
+        },
+        {
+            "text": "Керівництво",
+            "url": "https://mvs.gov.ua/team-1"
+        },
+        {
+            "text": "Символіка",
+            "url": "https://mvs.gov.ua/ministry/simvolika"
+        },
+        {
+            "text": "Вакансії",
+            "url": "https://mvs.gov.ua/ogolosennia-pro-provedennia-konkursu"
+        },
+        {
+            "text": "Структура",
+            "url": "https://mvs.gov.ua/ministry/struktura"
+        },
+        {
+            "text": "Профспілки",
+            "url": "https://mvs.gov.ua/ministry/trade-unions"
+        },
+        {
+            "text": "Герої МВС",
+            "url": "https://mvs.gov.ua/geroyi-mvs"
+        },
+        {
+            "text": "Європейська інтеграція",
+            "url": "https://mvs.gov.ua/jevropeiska-integraciia"
+        },
+        {
+            "text": "Запобігання корупції",
+            "url": "https://mvs.gov.ua/activity/prevention-corruption"
+        },
+        {
+            "text": "Планування",
+            "url": "https://mvs.gov.ua/planuvannia"
+        },
+        {
+            "text": "Євроатлантична інтеграція",
+            "url": "https://mvs.gov.ua/jevroatlanticna-integraciia"
+        },
+        {
+            "text": "Акредитований центр сертифікації ключів",
+            "url": "https://mvs.gov.ua/akreditovanii-centr-sertifikaciyi-klyuciv"
+        },
+        {
+            "text": "Уповноважений з питань осіб, зниклих безвісти за особливих обставин",
+            "url": "https://mvs.gov.ua/upovnovazenii-z-pitan-osib-zniklix-bezvisti-za-osoblivix-obstavin-1"
+        },
+        {
+            "text": "Ліцензування та проведення заходів державного нагляду (контролю)",
+            "url": "https://mvs.gov.ua/licenzuvannia-ta-provedennia-zaxodiv-derzavnogo-nagliadu-kontroliu"
+        },
+        {
+            "text": "Розшук",
+            "url": "https://mvs.gov.ua/activity/rozsuk"
+        },
+        {
+            "text": "Соціальний захист",
+            "url": "https://mvs.gov.ua/activity/social-protection-pension-provision"
+        },
+        {
+            "text": "Державне майно, яке пропонується до передачі",
+            "url": "https://mvs.gov.ua/informaciia-pro-derzavne-maino-iake-proponujetsia-do-peredaci"
+        },
+        {
+            "text": "Рівні права та можливості",
+            "url": "https://mvs.gov.ua/activity/rivni-prava-ta-mozlivosti"
+        },
+        {
+            "text": "Пенсійне забезпечення",
+            "url": "https://mvs.gov.ua/pensiine-zabezpecennia"
+        },
+        {
+            "text": "Публічні закупівлі",
+            "url": "https://mvs.gov.ua/activity/publicni-zakupivli"
+        },
+        {
+            "text": "Протидія та запобігання домашньому насильству",
+            "url": "https://mvs.gov.ua/activity/domestic-violence"
+        },
+        {
+            "text": "Психологічне забезпечення",
+            "url": "https://mvs.gov.ua/psixologicne-zabezpecennia"
+        },
+        {
+            "text": "Бюджет для громадян",
+            "url": "https://mvs.gov.ua/activity/byudzet-dlya-gromadyan"
+        },
+        {
+            "text": "Права людини",
+            "url": "https://mvs.gov.ua/activity/right"
+        },
+        {
+            "text": "Реабілітація та лікування",
+            "url": "https://mvs.gov.ua/rehabilitation-rest"
+        },
+        {
+            "text": "Внутрішній аудит",
+            "url": "https://mvs.gov.ua/vnutrisnii-audit"
+        },
+        {
+            "text": "ГО «Асоціація Ветеранів МВС»",
+            "url": "https://mvs.gov.ua/activity/go-asociaciya-veteraniv-mvs"
+        },
+        {
+            "text": "Безпечне дитинство",
+            "url": "https://mvs.gov.ua/bezpecne-ditinstvo"
+        },
+        {
+            "text": "Каталог послуг",
+            "url": "https://mvs.gov.ua/katalog-poslug"
+        },
+        {
+            "text": "Освіта та наука",
+            "url": "https://osvita.mvs.gov.ua"
+        },
+        {
+            "text": "Що потрібно знати про декларування зброї",
+            "url": "https://mvs.gov.ua/zbroia"
+        },
+        {
+            "text": "Автофотовідеофіксація порушень ПДР",
+            "url": "https://mvs.gov.ua/avtofotovideofiksaciia-porusen-pdr"
+        },
+        {
+            "text": "Інформатизація системи МВС",
+            "url": "https://mvs.gov.ua/informatizaciia-sistemi-mvs"
+        },
+        {
+            "text": "Авіація МВС",
+            "url": "https://mvs.gov.ua/aviaciia-mvs"
+        },
+        {
+            "text": "Документи про діяльність",
+            "url": "https://mvs.gov.ua/documents/activity-documents"
+        },
+        {
+            "text": "Нормативно-правові акти",
+            "url": "https://mvs.gov.ua/documents/normativno-pravovi-akti"
+        },
+        {
+            "text": "Енергоефективність",
+            "url": "https://mvs.gov.ua/energy-efficiency-1"
+        },
+        {
+            "text": "Е-взаємодія з ЄІС МВС",
+            "url": "https://mvs.gov.ua/e-vzajemodiya-z-jeis-mvs"
+        },
+        {
+            "text": "Корисна інформація",
+            "url": "https://mvs.gov.ua/korisna-informaciia"
+        },
+        {
+            "text": "Галузевий державний архів МВС України",
+            "url": "https://mvs.gov.ua/galuzevii-derzavnii-arxiv-mvs-ukrayini"
+        },
+        {
+            "text": "Голодомор: мовою архівних документів МВС",
+            "url": "https://mvs.gov.ua/golodomor-1932-1933"
+        },
+        {
+            "text": "Новини",
+            "url": "https://mvs.gov.ua/press-center/news"
+        },
+        {
+            "text": "Фото",
+            "url": "https://mvs.gov.ua/photo"
+        },
+        {
+            "text": "Відео",
+            "url": "https://mvs.gov.ua/press-center/video"
+        },
+        {
+            "text": "Медіа про нас",
+            "url": "https://mvs.gov.ua/media-pro-nas"
+        },
+        {
+            "text": "Анонси",
+            "url": "https://mvs.gov.ua/press-center/announcements"
+        },
+        {
+            "text": "Інформація для медіа",
+            "url": "https://mvs.gov.ua/media-inquiries"
+        },
+        {
+            "text": "Захист прав журналістів",
+            "url": "https://mvs.gov.ua/protection-of-journalists-rights"
+        },
+        {
+            "text": "Звернення громадян",
+            "url": "https://mvs.gov.ua/work-with-citizens"
+        },
+        {
+            "text": "Доступ до публічної інформації",
+            "url": "https://mvs.gov.ua/access-to-public-information"
+        },
+        {
+            "text": "Консультації з громадськістю",
+            "url": "https://mvs.gov.ua/konsultaciyi-z-gromadskistiu"
+        },
+        {
+            "text": "Громадська рада",
+            "url": "https://mvs.gov.ua/gromadska-rada"
+        },
+        {
+            "text": "Громадська експертиза",
+            "url": "https://mvs.gov.ua/gromadska-ekspertiza"
+        },
+        {
+            "text": "Сприяння розвитку громадянського суспільства",
+            "url": "https://mvs.gov.ua/public"
+        },
+        {
+            "text": "Механізми та процедури представлення інтересів громадськості",
+            "url": "https://mvs.gov.ua/mexanizmi-ta-proceduri-predstavlennia-interesiv-gromadskosti"
+        },
+        {
+            "text": "Часті запитання громадян",
+            "url": "https://mvs.gov.ua/casti-zapitannya-gromadyan"
+        },
+        {
+            "text": "Корисні посилання",
+            "url": "https://mvs.gov.ua/for_citizens/korisni-posilannya"
+        },
+        {
+            "text": "Міністерство внутрішніх справ України",
+            "url": "https://mvs.gov.ua/contacts/ministry-internal-affairs"
+        },
+        {
+            "text": "Державна прикордонна служба України",
+            "url": "https://mvs.gov.ua/contacts/state-border-guard-service"
+        },
+        {
+            "text": "Національна поліція України",
+            "url": "https://mvs.gov.ua/contacts/national-police-ukraine"
+        },
+        {
+            "text": "Державна служба України з надзвичайних ситуацій",
+            "url": "https://mvs.gov.ua/contacts/state-emergency-service"
+        },
+        {
+            "text": "Національна гвардія України",
+            "url": "https://mvs.gov.ua/contacts/national-guard-ukraine"
+        },
+        {
+            "text": "Державна міграційна служба України",
+            "url": "https://mvs.gov.ua/contacts/state-migration-service-ukraine"
+        },
+        {
+            "text": "Головний сервісний центр МВС України",
+            "url": "https://mvs.gov.ua/contacts/main-service-center-ministry-internal-affairs-ukraine"
+        },
+        {
+            "text": "Єдине вікно для громадян",
+            "url": "https://services.mvs.gov.ua/"
+        },
+        {
+            "text": "English",
+            "url": "https://mvs.gov.ua/en"
+        }
+    ],
+    "Новини": [
+        {
+            "title": "05.05.2025 18:00Велосипедисти — це учасники дорожнього руху, які повинні дотримуватися ПДР"
+        },
+        {
+            "title": "05.05.2025 16:00Екіпаж «Білий янгол» евакуював людей з Покровська"
+        },
+        {
+            "title": "05.05.2025 15:00Іван Вигівський зустрівся з Генеральним комісаром поліції Литви Арунасом Палаускасом"
+        },
+        {
+            "title": "05.05.2025 15:00МВС та ОБСЄ представили результати інформаційної кампанії щодо протидії незаконному "
+        },
+        {
+            "title": "05.05.2025 14:30Через обстріли на Донеччині поранено 10 осіб, пошкоджено 65 об’єктів"
+        }
+    ]
+}

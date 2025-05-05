@@ -1,85 +1,97 @@
 import requests
 from bs4 import BeautifulSoup
+import json
 
-url = "https://mvs.gov.ua/"
+JSON_FILE = "mvs_data.json"
+URL = "https://mvs.gov.ua/"
 
-def main():
-
-    # Надсилання HTTP GET-запиту із обробкою виключень
+# Функція для отримання HTML-розмітки
+def get_html(url):
     try:
         response = requests.get(url)
-        response.raise_for_status()  # Перевірка на HTTP-помилки
-    except requests.exceptions.HTTPError as errh:
-        print("HTTP-помилка:", errh)
-        return
-    except requests.exceptions.ConnectionError as errc:
-        print("Помилка з'єднання:", errc)
-        return
-    except requests.exceptions.Timeout as errt:
-        print("Час очікування вичерпано:", errt)
-        return
+        response.raise_for_status()
+        return response.text
     except requests.exceptions.RequestException as err:
-        print("Невідома помилка при запиті:", err)
+        print(f"Помилка запиту: {err}")
+        return None
+
+# Функція для збереження даних у JSON-файл
+def save_to_json(data, category):
+    try:
+        try:
+            with open(JSON_FILE, "r", encoding="utf-8") as file:
+                json_data = json.load(file)
+        except FileNotFoundError:
+            json_data = {}
+
+        json_data[category] = data
+
+        with open(JSON_FILE, "w", encoding="utf-8") as file:
+            json.dump(json_data, file, ensure_ascii=False, indent=4)
+        print(f"Дані збережено у {JSON_FILE} в категорію '{category}'")
+    except Exception as e:
+        print(f"Помилка при записі JSON: {e}")
+
+# Взаємодія з користувачем
+def main():
+    html = get_html(URL)
+    if not html:
         return
 
-    # Розбір отриманого HTML-контенту за допомогою BeautifulSoup
-    soup = BeautifulSoup(response.text, "html.parser")
+    soup = BeautifulSoup(html, "html.parser")
 
-    # Завдання 1: Витягнення заголовку сторінки (<title>)
-    try:
-        title = soup.title.get_text(strip=True) if soup.title else "Без заголовку"
-        print("Заголовок сторінки:", title)
-    except Exception as e:
-        print("Помилка отримання заголовку:", e)
+    while True:
+        print("\nОберіть дію:"
+              "\n1 - Зчитати заголовок сторінки"
+              "\n2 - Отримати метаопис"
+              "\n3 - Витягнути навігаційні посилання"
+              "\n4 - Витягнути заголовки новин"
+              "\n5 - Вихід\n")
 
-    # Завдання 2: Витягнення метаопису (<meta name="description">) (якщо є)
-    meta_desc = soup.find("meta", attrs={"name": "description"})
-    if meta_desc and meta_desc.get("content"):
-        print("Метаопис:", meta_desc.get("content"))
-    else:
-        print("Метаопис не знайдено.")
+        choice = input("Введіть номер операції: ")
 
-    # Завдання 3: Отримання навігаційних посилань
-    print("\nНавігаційні посилання:")
-    nav_section = soup.find("nav")
-    if nav_section:
-        nav_links = nav_section.find_all("a")
-    else:
-        # Якщо тег <nav> не знайдено, виводимо перші 10 посилань зі сторінки
-        nav_links = soup.find_all("a")[:10]
+        if choice == "1":
+            title = soup.title.get_text(strip=True) if soup.title else "Без заголовку"
+            print("\nЗаголовок сторінки:", title)
+            save_to_json({"title": title}, "Заголовок")
 
-    if nav_links:
-        for link in nav_links:
-            link_text = link.get_text(strip=True)
-            link_href = link.get("href", "Немає URL")
-            # Виводимо лише посилання з непорожнім текстом
-            if link_text:
-                print(f"- {link_text}: {link_href}")
-    else:
-        print("Навігаційні посилання не знайдено.")
+        elif choice == "2":
+            meta_desc = soup.find("meta", attrs={"name": "description"})
+            meta_text = meta_desc["content"] if meta_desc and meta_desc.get("content") else "Метаопис не знайдено"
+            print("\nМетаопис:", meta_text)
+            save_to_json({"meta_description": meta_text}, "Метаопис")
 
-    # Завдання 4: Спроба витягнути блок новин/оголошень
-    # Припустимо, що інформацію новин можна знайти в елементах, які містять відповідний клас або тег
-    print("\nБлок новин/оголошень:")
-    # Шукаємо елемент із класом 'news' (це може бути адаптовано під конкретну розмітку)
-    news_section = soup.find("div", class_="home-news__content-wrapper")
-    if news_section:
-        articles = news_section.find_all("li")
-        if articles:
-            for art in articles:
-                # Спроба отримати заголовок новини з тегу <h2> або інший текстовий контент
-                header_tag = art.find("h2")
-                if header_tag:
-                    article_title = header_tag.get_text(strip=True)
-                    print(f"- {article_title}")
-                else:
-                    # Якщо заголовок відсутній, виводимо перший шматок тексту
-                    print(f"- {art.get_text(strip=True)[:100]}...")
+        elif choice == "3":
+            nav_section = soup.find("nav")
+            nav_links = nav_section.find_all("a") if nav_section else soup.find_all("a")[:10]
+            links_data = [{"text": link.get_text(strip=True), "url": link.get("href", "Немає URL")} for link in nav_links if link.get_text(strip=True)]
+
+            print("\nНавігаційні посилання:")
+            for link in links_data:
+                print(f"- {link['text']}: {link['url']}")
+
+            save_to_json(links_data, "Навігація")
+
+        elif choice == "4":
+            news_section = soup.find("div", class_="home-news__content-wrapper")
+            articles = news_section.find_all("li") if news_section else []
+            news_data = [{"title": art.find("h2").get_text(strip=True) if art.find("h2") else art.get_text(strip=True)[:100]} for art in articles]
+
+            if news_data:
+                print("\nЗаголовки новин:")
+                for news in news_data:
+                    print(f"- {news['title']}")
+            else:
+                print("\nБлок новин не знайдено.")
+
+            save_to_json(news_data, "Новини")
+
+        elif choice == "5":
+            print("\nЗавершення роботи.")
+            break
         else:
-            print("У блоці новин знайдено, але не вдалося виділити окремі статті.")
-    else:
-        print("Блок новин/оголошень не знайдено.")
+            print("\nНевірний вибір. Спробуйте знову.")
 
-
+# Залишаємо можливість для рефакторінгу коду і розділення на окремі модулі в майбутньому
 if __name__ == "__main__":
     main()
